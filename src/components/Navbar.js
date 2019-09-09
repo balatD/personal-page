@@ -44,9 +44,10 @@ const Navbar = class extends React.Component {
       >
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
+            <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/" title="Logo">
               <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
+            </AniLink>
+
             {/* Hamburger menu */}
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
@@ -63,33 +64,9 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/about">
-                Products
+              <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/test">
+                Test
               </AniLink>
-              <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/products">
-                Products
-              </AniLink>
-              <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/blog">
-                Blog
-              </AniLink>
-              <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/contact">
-                Contact
-              </AniLink>
-              <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/contact/examples">
-                Form Examples
-              </AniLink>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
             </div>
           </div>
         </div>
