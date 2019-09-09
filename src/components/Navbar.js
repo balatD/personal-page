@@ -1,7 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'gatsby-plugin-transition-link'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import TransitionLink from 'gatsby-plugin-transition-link'
+
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -60,21 +63,21 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
+              <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/about">
                 Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
+              </AniLink>
+              <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/products">
+                Products
+              </AniLink>
+              <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/blog">
                 Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
+              </AniLink>
+              <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/contact">
                 Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
+              </AniLink>
+              <AniLink className="navbar-item" paintDrip hex="#ff4400" to="/contact/examples">
                 Form Examples
-              </Link>
+              </AniLink>
             </div>
             <div className="navbar-end has-text-centered">
               <a
